@@ -12,8 +12,8 @@ const leetspeakVersion = {
 }
 const keys = Object.keys(leetspeakVersion);
 let result = "";
-const str = 'Leet ORANGE Challenge';
-function leetspeak(str, obj) {
+const str = 'Leet ORAnGEs Challenge';
+function leetspeak(str) {
   const temp = str.split('');
   for (let element of temp) {
     result += keys.includes(element) || keys.includes(element.toUpperCase()) ? element = leetspeakVersion[element.toUpperCase()] : element = element.toLowerCase();
@@ -21,4 +21,4 @@ function leetspeak(str, obj) {
 
   return result;
 }
-document.getElementById("array").innerHTML = leetspeak(str, leetspeakVersion);
+document.getElementById("array").innerHTML = leetspeak(str);
